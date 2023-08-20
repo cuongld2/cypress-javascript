@@ -1,8 +1,10 @@
 
 
 describe('Count Test', () => {
+  beforeEach('Prepare to run before each test', ()=>{
+    cy.visit("");
+  })
   it('Does not do much!', async () => {
-    cy.visit("https://twilio-music-info-app-ha8m.vercel.app/");
       cy.get('a[class*="bg-gray-100"]').its('length').then(number => {
         console.log(number);
       }
